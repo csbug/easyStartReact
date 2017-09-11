@@ -13,6 +13,8 @@ class App extends React.Component {
 }
 
 class Header extends React.Component {
+	 
+
    render() {
       return (
           <div className="header clearfix">
@@ -55,14 +57,19 @@ class Jumbotron extends React.Component {
 	     header: "Jumbotron heading from state...",
 	     content: "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. from state..."
 	  }
+
 	}
+
+	updateState() {
+      alert('clicked');
+   }
 	
    render() {
       return (
         <div className="jumbotron">
 	        <h1 className="display-3">{this.state.header}</h1>
 	        <p className="lead">{this.state.content}</p>
-	        <p><a className="btn btn-lg btn-success" href="#" role="button">Sign up today</a></p>
+	        <p><a className="btn btn-lg btn-success" href="#" role="button" onClick = {this.updateState}>Sign up today</a></p>
       	</div>
       );
    }
